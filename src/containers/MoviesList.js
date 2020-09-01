@@ -8,6 +8,25 @@ import "./MoviesList.scss";
 
 /* MovieList : is to render data on dom - fetched  from api */
 const MoviesList = (props) => {
+  /* this is click event on buttons - will trigger based on button clicked by child component */
+  const onMovieSelect = (movie, key) => {
+    // eslint-disable-next-line default-case
+    switch (key) {
+      case "add":
+      case "moveToFavourite":
+        props.addMovie(movie, key);
+        break;
+      case "remove":
+        props.removeMovie(movie);
+        break;
+      case "watched":
+        props.watchedMovie(movie);
+        break;
+      default:
+        break;
+    }
+  };
+
   /* will call api and responsible to render list of all the movies */
   const renderedList = props.movies.map((movie) => {
     if (movie.Response.toLowerCase() === "false") {
@@ -54,25 +73,6 @@ const MoviesList = (props) => {
         ></MovieItem>
       );
     });
-
-  /* this is click event on buttons - will trigger based on button clicked by child component */
-  const onMovieSelect = (movie, key) => {
-    // eslint-disable-next-line default-case
-    switch (key) {
-      case "add":
-      case "moveToFavourite":
-        props.addMovie(movie, key);
-        break;
-      case "remove":
-        props.removeMovie(movie);
-        break;
-      case "watched":
-        props.watchedMovie(movie);
-        break;
-      default:
-        break;
-    }
-  };
 
   return (
     <>
