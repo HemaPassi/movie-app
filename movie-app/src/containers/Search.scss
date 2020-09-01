@@ -1,0 +1,18 @@
+.search-wrapper {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  form {
+    display: flex;
+  }
+  > div {
+    padding: 0 1rem;
+  }
+  button {
+    background-color: #009192;
+    color: white;
+  }
+}

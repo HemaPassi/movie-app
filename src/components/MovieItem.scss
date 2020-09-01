@@ -1,0 +1,41 @@
+.movie-item {
+  display: flex;
+  align-items: top;
+  border: 2px solid gray;
+  cursor: pointer;
+  width: 90%;
+  margin: 1rem;
+  .title {
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+  }
+  .right {
+    display: inline-flex;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .details {
+    padding: 0.1rem;
+    font-size: 0.8rem;
+    div {
+      padding: 0.2rem 0;
+      width: 100%;
+    }
+  }
+  img {
+    max-width: 100px;
+  }
+  .option-btn {
+    background-color: #009192;
+    color: white;
+    font-weight: bold;
+    min-width: 120px;
+    margin-bottom: 0.5rem;
+  }
+  .button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

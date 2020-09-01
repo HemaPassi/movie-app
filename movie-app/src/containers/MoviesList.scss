@@ -1,0 +1,15 @@
+.list-wrapper {
+  display: flex;
+  align-items: top;
+  cursor: pointer;
+  margin: 1rem;
+  > div {
+    border: 1px solid gray;
+    width: 49%;
+  }
+  .error {
+    color: red;
+    font-size: 1rem;
+    padding: 2rem;
+  }
+}
